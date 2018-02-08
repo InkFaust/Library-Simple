@@ -2,3 +2,5 @@ node_modules
 books.sqlite
 .idea/
 npm-debug.log*
+client/node_modules
+.vscode

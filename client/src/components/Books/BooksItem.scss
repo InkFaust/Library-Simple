@@ -1,0 +1,37 @@
+@import "../../style/_mixin.scss";
+
+.book-item {
+  @include flexbox;
+  @include flex-dir(column);
+  padding: 5px;
+  border: 1px solid #cccccc;
+  background: #222233;
+
+  &__title {
+    font-size: 18px;
+    color: #a9cbff;
+    cursor: pointer;
+    width: fit-content;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  &__author {
+    cursor: pointer;
+    font-size: 14px;
+    color: #96b8e1;
+    width: fit-content;
+
+    &:hover {
+      span {
+        color: #ffffff;
+      }
+    }
+
+    span:hover {
+      color: #ffffff;
+    }
+  }
+}

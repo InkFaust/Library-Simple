@@ -1,0 +1,8 @@
+@import "../../style/_mixin.scss";
+
+.books-list {
+  @include flexbox;
+  @include flex-dir(column);
+  box-sizing: border-box;
+  padding: 10px;
+}

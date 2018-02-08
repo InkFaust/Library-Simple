@@ -1,0 +1,31 @@
+.book-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  background: #222233; }
+  .book-item__title {
+    font-size: 18px;
+    color: #a9cbff;
+    cursor: pointer;
+    width: fit-content; }
+    .book-item__title:hover {
+      color: #ffffff; }
+  .book-item__author {
+    cursor: pointer;
+    font-size: 14px;
+    color: #96b8e1;
+    width: fit-content; }
+    .book-item__author:hover span {
+      color: #ffffff; }
+    .book-item__author span:hover {
+      color: #ffffff; }
