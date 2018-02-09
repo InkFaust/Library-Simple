@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Aux from "./components/Aux/Aux";
+import Aux from "./containers/hoc/Aux/Aux";
 import Home from "./containers/Home/Home";
 import Books from "./containers/Books/Books";
 import BookPage from "./containers/Books/BookPage/BookPage";

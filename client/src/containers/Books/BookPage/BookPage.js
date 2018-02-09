@@ -4,7 +4,7 @@ import * as booksActions from "../../../store/actions";
 
 import "./BookPage.css";
 
-import withErrorHandler from "../../withErrorHandler/withErrorHandler";
+import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import BookInfo from "../../../components/Books/BookInfo/BookInfo";
 
 class BookPage extends Component {

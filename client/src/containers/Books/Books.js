@@ -5,7 +5,7 @@ import * as booksActions from "../../store/actions";
 import "./Books.css";
 import libraryBk from "../../assets/img/library.jpg";
 
-import withErrorHandler from "../withErrorHandler/withErrorHandler";
+import withErrorHandler from "../hoc/withErrorHandler/withErrorHandler";
 import Loader from "../../components/Loader/Loader";
 import BooksItem from "../../components/Books/BooksItem";
 

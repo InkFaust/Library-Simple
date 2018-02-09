@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as authorsActions from "../../store/actions";
 
-import withErrorHandler from "../withErrorHandler/withErrorHandler";
+import withErrorHandler from "../hoc/withErrorHandler/withErrorHandler";
 import AuthorsItem from "../../components/Authors/AuthorsItem";
 
 import "./Authors.css";
