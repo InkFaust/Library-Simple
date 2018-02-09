@@ -3,6 +3,7 @@ import * as actionTypes from "../actions/actionTypes";
 const initialState = {
   books: null,
   book: null,
+  authors: null,
   error: false
 };
 
@@ -14,6 +15,7 @@ const reducer = (state = initialState, action) => {
         books: action.books,
         error: false
       };
+
     case actionTypes.FETCH_BOOKS_FAILED:
       return {
         ...state,
@@ -24,6 +26,13 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         book: action.book,
+        error: false
+      };
+
+    case actionTypes.SET_AUTHORS:
+      return {
+        ...state,
+        authors: action.authors,
         error: false
       };
     default:

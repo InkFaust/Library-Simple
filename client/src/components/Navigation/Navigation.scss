@@ -1,0 +1,49 @@
+@import "../../style/_mixinComps.scss";
+
+.list {
+  @include list;
+
+  &__el {
+    @include list-el;
+  }
+}
+
+.list-home {
+  @include flexbox;
+  opacity: 0;
+  animation: opacityMotion 0.3s linear forwards;
+
+  .list__el {
+    width: 150px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 12px double rgba(11, 24, 74, 0.6);
+    box-sizing: border-box;
+    transition: background 0.3s linear, border 0.3s linear;
+
+    &:first-child {
+      border-right: 2px solid rgba(11, 24, 74, 0.6);
+      transform: skewY(-10deg);
+    }
+
+    &:last-child {
+      border-left: 2px solid rgba(11, 24, 74, 0.6);
+      transform: skewY(10deg);
+    }
+
+    &:hover {
+      background: rgb(255, 255, 255);
+      border: 12px double rgba(11, 24, 74, 0.8);
+
+      &:first-child {
+        border-right: 2px solid rgba(11, 24, 74, 0.8);
+      }
+
+      &:last-child {
+        border-left: 2px solid rgba(11, 24, 74, 0.8);
+      }
+    }
+  }
+}
+
+@include opacity(1);

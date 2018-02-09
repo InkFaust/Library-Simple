@@ -1,0 +1,19 @@
+@import "../../../style/_mixinComps.scss";
+
+.link {
+  @include link;
+}
+
+.link-home {
+  @include flexbox;
+  @include justify-content(center);
+  @include align-items(center);
+  color: #373737;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+
+  &:hover {
+    color: #222222;
+  }
+}

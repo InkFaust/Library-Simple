@@ -1,0 +1,33 @@
+@import "../../../style/_mixin.scss";
+
+.book-info {
+  @include flexbox;
+  @include flex-dir(column);
+  padding: 10px;
+
+  &__name {
+    font-size: 18px;
+    width: fit-content;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #a9cbff;
+  }
+
+  &__author {
+    font-size: 14px;
+    color: #6fa2dd;
+    width: fit-content;
+    margin-bottom: 10px;
+  }
+
+  &__pages,
+  &__year {
+    font-size: 14px;
+    color: #6fa2dd;
+    margin-bottom: 10px;
+  }
+
+  &__year {
+    margin-bottom: 0;
+  }
+}

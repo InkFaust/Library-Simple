@@ -1,0 +1,47 @@
+@import "./_mixin.scss";
+
+//Containers
+@mixin container {
+  @include flexbox;
+  @include flex-dir(column);
+  @include align-items(center);
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+//UI
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin list-el($color:#000000, $fz: 20px) {
+  font-size: $fz;
+  color: $color;
+}
+
+@mixin link($color: #000000, $fz: 20px, $text-transform: uppercase) {
+  font-size: $fz;
+  color: $color;
+  text-transform: $text-transform;
+  text-decoration: none;
+}
+
+//EFFECTS
+@mixin opacity($opt) {
+  @keyframes opacityMotion {
+    100% {
+      opacity: $opt;
+    }
+  }
+}
+
+@mixin rotate($rt) {
+  @keyframes rotateMotion {
+    100% {
+      transform: rotate($rt);
+    }
+  }
+}

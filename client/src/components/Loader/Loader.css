@@ -1,0 +1,22 @@
+.container-loader {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center; }
+
+.loader {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 10px double;
+  border-right-color: #00457e;
+  border-left-color: #00457e;
+  border-top-color: #dfdfdf;
+  border-bottom-color: #dfdfdf;
+  animation: rotateMotion 1s infinite linear;
+  align-self: center; }
+
+@keyframes rotateMotion {
+  100% {
+    transform: rotate(360deg); } }

@@ -1,17 +1,28 @@
 @import "../../style/_mixin.scss";
+@import "../../style/_mixinComps.scss";
 
 .book-item {
   @include flexbox;
   @include flex-dir(column);
-  padding: 5px;
-  border: 1px solid #cccccc;
-  background: #222233;
+  @include justify-content(center);
+  @include flex-grow(1);
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #a9cbff;
+  flex-basis: 20%;
+  min-height: 100px;
+  margin: 5px;
+  opacity: 0;
+  animation: opacityMotion 0.3s linear forwards;
 
   &__title {
     font-size: 18px;
     color: #a9cbff;
     cursor: pointer;
-    width: fit-content;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 15px;
+    text-align: center;
 
     &:hover {
       color: #ffffff;
@@ -21,7 +32,7 @@
   &__author {
     cursor: pointer;
     font-size: 14px;
-    color: #96b8e1;
+    color: #6fa2dd;
     width: fit-content;
 
     &:hover {
@@ -35,3 +46,5 @@
     }
   }
 }
+
+@include opacity(1);

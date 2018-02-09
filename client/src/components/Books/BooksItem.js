@@ -1,19 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link, withRouter } from "react-router-dom";
 
 import "./BooksItem.css";
 
 const propTypes = {
   title: PropTypes.string,
-  author: PropTypes.string
+  author: PropTypes.string,
+  bookId: PropTypes.number
 };
 
 function BookItem(props) {
   return (
     <div className="book-item">
-      <div className="book-item__title">{props.title}</div>
+      <Link
+        to={`${props.match.path}/${props.bookId}`}
+        className="book-item__title"
+      >
+        {props.title}
+      </Link>
       <div className="book-item__author">
-        Author: <span>{props.author}</span>
+        Author: <br /> <span>{props.author}</span>
       </div>
     </div>
   );
@@ -21,4 +28,4 @@ function BookItem(props) {
 
 BookItem.propTypes = propTypes;
 
-export default BookItem;
+export default withRouter(BookItem);

@@ -3,8 +3,18 @@ import { connect } from "react-redux";
 import * as booksActions from "../../store/actions";
 
 import "./Books.css";
+import libraryBk from "../../assets/img/library.jpg";
 
+import withErrorHandler from "../withErrorHandler/withErrorHandler";
+import Loader from "../../components/Loader/Loader";
 import BooksItem from "../../components/Books/BooksItem";
+
+const style = {
+  backgroundImage: `url(${libraryBk})`,
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover"
+};
 
 class Books extends Component {
   componentDidMount() {
@@ -12,20 +22,21 @@ class Books extends Component {
   }
 
   render() {
-    if (this.props.books) {
+    if (this.props.books && !this.props.error) {
       return (
-        <div className="books-list">
+        <div className="container container-books" style={style}>
           {this.props.books.map(book => (
             <BooksItem
               key={book.id}
               title={book.title}
               author={book.author.name}
+              bookId={book.id}
             />
           ))}
         </div>
       );
     } else {
-      return <div> LOADING </div>;
+      return <Loader />;
     }
   }
 }
@@ -43,4 +54,6 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Books);
+export default connect(mapStateToProps, mapDispatchToProps)(
+  withErrorHandler(Books)
+);
