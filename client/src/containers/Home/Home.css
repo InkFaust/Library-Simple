@@ -1,4 +1,4 @@
-.container {
+.container-home {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -15,12 +15,16 @@
   -webkit-align-items: center;
   -moz-align-items: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
   padding: 10px;
   box-sizing: border-box;
-  min-height: 100%; }
-  .container-home {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    justify-content: center; }
+  min-height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center; }

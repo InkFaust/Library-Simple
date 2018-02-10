@@ -24,8 +24,8 @@ class Authors extends Component {
   render() {
     if (this.props.authors) {
       return (
-        <div className="container" style={style}>
-          <div className="container-center">
+        <div className="container-authors" style={style}>
+          <div className="container-center-authors">
             {this.props.authors.map(author => (
               <AuthorsItem
                 key={author.id}

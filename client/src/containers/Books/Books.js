@@ -24,8 +24,8 @@ class Books extends Component {
   render() {
     if (this.props.books && !this.props.error) {
       return (
-        <div className="container" style={style}>
-          <div className="container-center">
+        <div className="container-books" style={style}>
+          <div className="container-center-books">
             {this.props.books.map(book => (
               <BooksItem
                 key={book.id}

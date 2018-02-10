@@ -10,22 +10,22 @@ const propTypes = {
   bookId: PropTypes.number
 };
 
-function BookItem(props) {
+function BooksItem(props) {
   return (
-    <div className="book-item">
+    <div className="books-item">
       <Link
         to={`${props.match.path}/${props.bookId}`}
-        className="book-item__title"
+        className="books-item__title"
       >
         {props.title}
       </Link>
-      <div className="book-item__author">
+      <div className="books-item__author">
         Author: <br /> <span>{props.author}</span>
       </div>
     </div>
   );
 }
 
-BookItem.propTypes = propTypes;
+BooksItem.propTypes = propTypes;
 
-export default withRouter(BookItem);
+export default withRouter(BooksItem);

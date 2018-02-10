@@ -34,6 +34,8 @@
         border-right: 2px solid #000; }
       .list-home .list__el:hover:last-child {
         border-left: 2px solid #000; }
+      .list-home .list__el:hover .link-home {
+        color: #000; }
 
 @keyframes opacityMotion {
   100% {

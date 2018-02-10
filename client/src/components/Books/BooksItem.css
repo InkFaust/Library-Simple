@@ -1,4 +1,4 @@
-.book-item {
+.books-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -29,7 +29,7 @@
   margin: 5px;
   opacity: 0;
   animation: opacityMotion 0.3s linear forwards; }
-  .book-item__title {
+  .books-item__title {
     font-size: 18px;
     color: #a9cbff;
     cursor: pointer;
@@ -37,16 +37,16 @@
     text-decoration: none;
     margin-bottom: 15px;
     text-align: center; }
-    .book-item__title:hover {
+    .books-item__title:hover {
       color: #ffffff; }
-  .book-item__author {
+  .books-item__author {
     cursor: pointer;
     font-size: 14px;
     color: #6fa2dd;
     width: fit-content; }
-    .book-item__author:hover span {
+    .books-item__author:hover span {
       color: #ffffff; }
-    .book-item__author span:hover {
+    .books-item__author span:hover {
       color: #ffffff; }
 
 @keyframes opacityMotion {

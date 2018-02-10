@@ -10,7 +10,30 @@
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 10px; }
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 30%;
+  -moz-box-flex: 1;
+  -moz-flex: 1 1 30%;
+  -ms-flex: 1 1 30%;
+  flex: 1 1 30%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #a9cbff;
+  box-sizing: border-box;
+  min-height: 100px;
+  margin: 5px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 60%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 1 60%;
+  -ms-flex: 0 1 60%;
+  flex: 0 1 60%;
+  min-height: 200px; }
   .book-info__name {
     font-size: 18px;
     width: fit-content;

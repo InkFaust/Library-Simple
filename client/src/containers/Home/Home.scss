@@ -1,10 +1,7 @@
 @import "../../style/_mixin.scss";
 @import "../../style/_mixinComps.scss";
 
-.container {
+.container-home {
   @include container;
-
-  &-home {
-    @include justify-content(center);
-  }
+  @include justify-content(center);
 }

@@ -5,6 +5,7 @@
   @include flexbox;
   @include flex-dir(column);
   @include align-items(center);
+  @include justify-content(center);
   padding: 10px;
   box-sizing: border-box;
   min-height: 100%;
@@ -16,6 +17,8 @@
   @include justify-content(space-between);
   @include flex-wrap(wrap);
   @include align-content(space-around);
+  width: 70%;
+  max-width: 900px;
 }
 
 @mixin item {

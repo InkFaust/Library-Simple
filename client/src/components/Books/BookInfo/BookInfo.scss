@@ -1,9 +1,10 @@
 @import "../../../style/_mixin.scss";
+@import "../../../style/_mixinComps.scss";
 
 .book-info {
-  @include flexbox;
-  @include flex-dir(column);
-  padding: 10px;
+  @include item;
+  @include flex(0, 1, 60%);
+  min-height: 200px;
 
   &__name {
     font-size: 18px;

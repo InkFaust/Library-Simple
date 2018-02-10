@@ -1,11 +1,11 @@
 @import "../../../style/_mixin.scss";
+@import "../../../style/_mixinComps.scss";
 
-.book-page {
-  @include flexbox;
-  @include flex-dir(column);
-  @include align-items(center);
-  height: 100%;
-  background: #222233;
-  border: 1px solid #a9cbff;
-  padding: 10px;
+.container-book {
+  @include container;
+}
+
+.container-center-book {
+  @include containerList;
+  @include justify-content(center);
 }

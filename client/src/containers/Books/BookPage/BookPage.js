@@ -3,9 +3,18 @@ import { connect } from "react-redux";
 import * as booksActions from "../../../store/actions";
 
 import "./BookPage.css";
+import libraryBk from "../../../assets/img/library.jpg";
 
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
+import Loader from "../../../components/Loader/Loader";
 import BookInfo from "../../../components/Books/BookInfo/BookInfo";
+
+const style = {
+  backgroundImage: `url(${libraryBk})`,
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover"
+};
 
 class BookPage extends Component {
   componentDidMount() {
@@ -29,12 +38,14 @@ class BookPage extends Component {
       const { title, year, pages } = this.props.book;
       const { name } = this.props.book.author;
       return (
-        <div className="book-page">
-          <BookInfo name={title} author={name} year={year} pages={pages} />
+        <div className="container-book" style={style}>
+          <div className="container-center-book">
+            <BookInfo name={title} author={name} year={year} pages={pages} />
+          </div>
         </div>
       );
     } else {
-      return <div> LOADING </div>;
+      return <Loader />;
     }
   }
 }

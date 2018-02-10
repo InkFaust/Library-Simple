@@ -1,7 +1,7 @@
 @import "../../style/_mixin.scss";
 @import "../../style/_mixinComps.scss";
 
-.book-item {
+.books-item {
   @include item;
   opacity: 0;
   animation: opacityMotion 0.3s linear forwards;

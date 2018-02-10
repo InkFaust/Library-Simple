@@ -1,8 +1,10 @@
 @import "../../style/_mixin.scss";
 @import "../../style/_mixinComps.scss";
 
-.container-center {
+.container-books {
+  @include container;
+}
+
+.container-center-books {
   @include containerList;
-  width: 70%;
-  max-width: 900px;
 }

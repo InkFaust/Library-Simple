@@ -16,7 +16,7 @@ const style = {
 export default class Home extends Component {
   render() {
     return (
-      <div className="container container-home" style={style}>
+      <div className="container-home" style={style}>
         <Navigation className="list-home">
           <LinkEl to="/books/" className="link-home">
             Books
