@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 
+import Error from "../../../components/Loader/Error/Error";
+
 const withErrorHandler = WrappedComponent => {
   return class extends Component {
     render() {
       if (!this.props.error) {
         return <WrappedComponent {...this.props} />;
       } else {
-        return <div>MODAL ERROR</div>;
+        return <Error />;
       }
     }
   };

@@ -1,1 +1,8 @@
+@import "../../style/_mixin.scss";
+@import "../../style/_mixinComps.scss";
 
+.container-center {
+  @include containerList;
+  width: 70%;
+  max-width: 900px;
+}

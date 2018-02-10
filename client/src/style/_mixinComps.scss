@@ -10,6 +10,27 @@
   min-height: 100%;
 }
 
+@mixin containerList {
+  @include flexbox;
+  @include flex-dir(row);
+  @include justify-content(space-between);
+  @include flex-wrap(wrap);
+  @include align-content(space-around);
+}
+
+@mixin item {
+  @include flexbox;
+  @include flex-dir(column);
+  @include justify-content(center);
+  @include flex(1, 1, 30%);
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #a9cbff;
+  box-sizing: border-box;
+  min-height: 100px;
+  margin: 5px;
+}
+
 //UI
 @mixin list {
   margin: 0;

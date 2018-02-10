@@ -2,16 +2,7 @@
 @import "../../style/_mixinComps.scss";
 
 .book-item {
-  @include flexbox;
-  @include flex-dir(column);
-  @include justify-content(center);
-  @include flex-grow(1);
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.8);
-  border: 1px solid #a9cbff;
-  flex-basis: 20%;
-  min-height: 100px;
-  margin: 5px;
+  @include item;
   opacity: 0;
   animation: opacityMotion 0.3s linear forwards;
 

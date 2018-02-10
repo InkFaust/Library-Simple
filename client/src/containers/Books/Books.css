@@ -1,4 +1,9 @@
-.container-books {
+.container-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-direction: normal;
   -webkit-box-orient: horizontal;
   -webkit-flex-direction: row;
@@ -17,4 +22,6 @@
   -webkit-align-content: space-around;
   -moz-align-content: space-around;
   -ms-flex-line-pack: space-around;
-  align-content: space-around; }
+  align-content: space-around;
+  width: 70%;
+  max-width: 900px; }

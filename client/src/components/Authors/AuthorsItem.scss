@@ -1,0 +1,30 @@
+@import "../../style/_mixin.scss";
+@import "../../style/_mixinComps.scss";
+
+.author-item {
+  @include item;
+  opacity: 0;
+  animation: opacityMotion 0.3s linear forwards;
+
+  &__name {
+    font-size: 18px;
+    color: #a9cbff;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 15px;
+    text-align: center;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  &__country {
+    font-size: 14px;
+    color: #6fa2dd;
+    width: fit-content;
+  }
+}
+
+@include opacity(1);

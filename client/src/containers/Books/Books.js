@@ -24,15 +24,17 @@ class Books extends Component {
   render() {
     if (this.props.books && !this.props.error) {
       return (
-        <div className="container container-books" style={style}>
-          {this.props.books.map(book => (
-            <BooksItem
-              key={book.id}
-              title={book.title}
-              author={book.author.name}
-              bookId={book.id}
-            />
-          ))}
+        <div className="container" style={style}>
+          <div className="container-center">
+            {this.props.books.map(book => (
+              <BooksItem
+                key={book.id}
+                title={book.title}
+                author={book.author.name}
+                bookId={book.id}
+              />
+            ))}
+          </div>
         </div>
       );
     } else {

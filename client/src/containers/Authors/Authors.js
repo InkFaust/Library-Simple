@@ -2,10 +2,19 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as authorsActions from "../../store/actions";
 
+import Loader from "../../components/Loader/Loader";
 import withErrorHandler from "../hoc/withErrorHandler/withErrorHandler";
 import AuthorsItem from "../../components/Authors/AuthorsItem";
 
+import writerBk from "../../assets/img/writer.jpg";
 import "./Authors.css";
+
+const style = {
+  backgroundImage: `url(${writerBk})`,
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover"
+};
 
 class Authors extends Component {
   componentDidMount() {
@@ -15,19 +24,21 @@ class Authors extends Component {
   render() {
     if (this.props.authors) {
       return (
-        <div className="authors-list">
-          {this.props.authors.map(author => (
-            <AuthorsItem
-              key={author.id}
-              id={author.id}
-              name={author.name}
-              country={author.country}
-            />
-          ))}
+        <div className="container" style={style}>
+          <div className="container-center">
+            {this.props.authors.map(author => (
+              <AuthorsItem
+                key={author.id}
+                id={author.id}
+                name={author.name}
+                country={author.country}
+              />
+            ))}
+          </div>
         </div>
       );
     } else {
-      return <div> LOADING </div>;
+      return <Loader />;
     }
   }
 }
