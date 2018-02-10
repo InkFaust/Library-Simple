@@ -1,1 +1,7 @@
-export { initBooks, initBook, initAuthors } from "./actions.js";
+export {
+  initBooks,
+  initBook,
+  initAuthors,
+  initAuthor,
+  initAuthorBooks
+} from "./actions.js";

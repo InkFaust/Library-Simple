@@ -1,13 +1,26 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import * as authorsActions from "../../store/actions";
 
 import Loader from "../../components/Loader/Loader";
 import withErrorHandler from "../hoc/withErrorHandler/withErrorHandler";
-import AuthorsItem from "../../components/Authors/AuthorsItem";
+import AuthorsUI from "../../components/AuthorsUI/AuthorsUI";
 
 import writerBk from "../../assets/img/writer.jpg";
 import "./Authors.css";
+
+const propTypes = {
+  onInitAuthors: PropTypes.func,
+  authors: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      country: PropTypes.string,
+      name: PropTypes.string
+    })
+  ),
+  error: PropTypes.bool
+};
 
 const style = {
   backgroundImage: `url(${writerBk})`,
@@ -23,11 +36,13 @@ class Authors extends Component {
 
   render() {
     if (this.props.authors) {
+      const { authors } = this.props;
+
       return (
         <div className="container-authors" style={style}>
           <div className="container-center-authors">
-            {this.props.authors.map(author => (
-              <AuthorsItem
+            {authors.map(author => (
+              <AuthorsUI
                 key={author.id}
                 id={author.id}
                 name={author.name}
@@ -42,6 +57,8 @@ class Authors extends Component {
     }
   }
 }
+
+Authors.propTypes = propTypes;
 
 const mapStateToProps = state => {
   return {

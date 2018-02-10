@@ -4,7 +4,7 @@ import "./Loader.css";
 
 function loader() {
   return (
-    <div className="container container-loader">
+    <div className="container-loader">
       <div className="loader" />
     </div>
   );

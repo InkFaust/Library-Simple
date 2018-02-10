@@ -1,12 +1,12 @@
 @import "../../style/_mixin.scss";
 @import "../../style/_mixinComps.scss";
 
-.books-item {
+.authors-item {
   @include item;
   opacity: 0;
   animation: opacityMotion 0.3s linear forwards;
 
-  &__title {
+  &__name {
     font-size: 18px;
     color: #a9cbff;
     cursor: pointer;
@@ -20,21 +20,10 @@
     }
   }
 
-  &__author {
-    cursor: pointer;
+  &__country {
     font-size: 14px;
     color: #6fa2dd;
     width: fit-content;
-
-    &:hover {
-      span {
-        color: #ffffff;
-      }
-    }
-
-    span:hover {
-      color: #ffffff;
-    }
   }
 }
 

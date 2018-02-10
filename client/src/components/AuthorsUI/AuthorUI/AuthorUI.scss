@@ -1,0 +1,53 @@
+@import "../../../style/_mixin.scss";
+@import "../../../style/_mixinComps.scss";
+
+.author-item {
+  @include item;
+  @include flex(0, 1, 60%);
+  @include justify-content(center);
+  @include align-items(center);
+  min-height: 200px;
+  opacity: 0;
+  animation: opacityMotion 0.3s forwards;
+
+  &__name {
+    font-size: 18px;
+    width: fit-content;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #a9cbff;
+  }
+
+  &__country {
+    font-size: 14px;
+    color: #6fa2dd;
+    width: fit-content;
+    margin-bottom: 10px;
+  }
+}
+
+.author-books {
+  &-list {
+    @include list;
+
+    &__el {
+      @include list-el;
+    }
+  }
+
+  &-title {
+    font-size: 18px;
+    color: #6fa2dd;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    @include link(#a9cbff, 16px);
+
+    &:hover {
+      @include link(#ffffff, 16px);
+    }
+  }
+}
+
+@include opacity(1);

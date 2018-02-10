@@ -82,3 +82,53 @@ export const initAuthors = () => {
       });
   };
 };
+
+//AUTHOR
+export const setAuthor = author => {
+  return {
+    type: actionTypes.SET_AUTHOR,
+    author: author
+  };
+};
+
+export const initAuthor = id => {
+  return dispatch => {
+    axios
+      .get("/api/authors/" + id)
+      .then(response => {
+        if (response.data) {
+          dispatch(setAuthor(response.data));
+        } else {
+          dispatch(fetchBooksFailed());
+        }
+      })
+      .catch(error => {
+        dispatch(fetchBooksFailed());
+      });
+  };
+};
+
+//AUTHOR BOOKS
+export const setAuthorBooks = authorBooks => {
+  return {
+    type: actionTypes.SET_AUTHOR_BOOKS,
+    authorBooks: authorBooks
+  };
+};
+
+export const initAuthorBooks = id => {
+  return dispatch => {
+    axios
+      .get("/api/authors/" + id + "/books/")
+      .then(response => {
+        if (response.data.length > 0) {
+          dispatch(setAuthorBooks(response.data));
+        } else {
+          dispatch(fetchBooksFailed());
+        }
+      })
+      .catch(error => {
+        dispatch(fetchBooksFailed());
+      });
+  };
+};

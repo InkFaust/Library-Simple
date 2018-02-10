@@ -1,10 +1,13 @@
 @import "../../../style/_mixin.scss";
 @import "../../../style/_mixinComps.scss";
 
-.book-info {
+.book-item {
   @include item;
   @include flex(0, 1, 60%);
+  @include justify-content(center);
   min-height: 200px;
+  opacity: 0;
+  animation: opacityMotion 0.3s forwards;
 
   &__name {
     font-size: 18px;
@@ -32,3 +35,5 @@
     margin-bottom: 0;
   }
 }
+
+@include opacity(1);

@@ -1,12 +1,12 @@
 @import "../../style/_mixin.scss";
 @import "../../style/_mixinComps.scss";
 
-.author-item {
+.books-item {
   @include item;
   opacity: 0;
   animation: opacityMotion 0.3s linear forwards;
 
-  &__name {
+  &__title {
     font-size: 18px;
     color: #a9cbff;
     cursor: pointer;
@@ -20,10 +20,27 @@
     }
   }
 
-  &__country {
+  &__author {
+    cursor: pointer;
     font-size: 14px;
     color: #6fa2dd;
     width: fit-content;
+
+    &:hover {
+      .books-item__link {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__link {
+    color: #6fa2dd;
+    font-size: 14px;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+    }
   }
 }
 

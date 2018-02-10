@@ -24,7 +24,7 @@
 @mixin item {
   @include flexbox;
   @include flex-dir(column);
-  @include justify-content(center);
+  @include justify-content(space-between);
   @include flex(1, 1, 30%);
   padding: 10px;
   background: rgba(0, 0, 0, 0.8);

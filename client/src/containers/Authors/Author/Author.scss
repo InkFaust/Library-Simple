@@ -1,0 +1,11 @@
+@import "../../../style/_mixin.scss";
+@import "../../../style/_mixinComps.scss";
+
+.container-author {
+  @include container;
+}
+
+.container-center-author {
+  @include containerList;
+  @include justify-content(center);
+}

@@ -1,8 +1,18 @@
+@import "../../../style/_mixinComps.scss";
+
 .container-error {
+  @include container;
   background: #34a8ac;
+}
+
+.container-center-error {
+  @include containerList;
+  @include flex-dir(column);
 }
 
 .error-message {
   font-size: 24px;
   color: #fff;
+  margin: 10px 0;
+  text-align: center;
 }

@@ -1,4 +1,4 @@
-.book-info {
+.authors-item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -10,11 +10,11 @@
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 30%;
   -moz-box-flex: 1;
@@ -27,27 +27,23 @@
   box-sizing: border-box;
   min-height: 100px;
   margin: 5px;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 60%;
-  -moz-box-flex: 0;
-  -moz-flex: 0 1 60%;
-  -ms-flex: 0 1 60%;
-  flex: 0 1 60%;
-  min-height: 200px; }
-  .book-info__name {
+  opacity: 0;
+  animation: opacityMotion 0.3s linear forwards; }
+  .authors-item__name {
     font-size: 18px;
-    width: fit-content;
+    color: #a9cbff;
+    cursor: pointer;
     text-transform: uppercase;
-    margin-bottom: 10px;
-    color: #a9cbff; }
-  .book-info__author {
+    text-decoration: none;
+    margin-bottom: 15px;
+    text-align: center; }
+    .authors-item__name:hover {
+      color: #ffffff; }
+  .authors-item__country {
     font-size: 14px;
     color: #6fa2dd;
-    width: fit-content;
-    margin-bottom: 10px; }
-  .book-info__pages, .book-info__year {
-    font-size: 14px;
-    color: #6fa2dd;
-    margin-bottom: 10px; }
-  .book-info__year {
-    margin-bottom: 0; }
+    width: fit-content; }
+
+@keyframes opacityMotion {
+  100% {
+    opacity: 1; } }

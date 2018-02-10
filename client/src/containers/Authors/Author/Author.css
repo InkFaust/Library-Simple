@@ -1,4 +1,4 @@
-.container-error {
+.container-author {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -22,10 +22,9 @@
   justify-content: center;
   padding: 10px;
   box-sizing: border-box;
-  min-height: 100%;
-  background: #34a8ac; }
+  min-height: 100%; }
 
-.container-center-error {
+.container-center-author {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -52,15 +51,8 @@
   align-content: space-around;
   width: 70%;
   max-width: 900px;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-
-.error-message {
-  font-size: 24px;
-  color: #fff;
-  margin: 10px 0;
-  text-align: center; }
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center; }

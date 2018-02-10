@@ -1,0 +1,87 @@
+.author-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 30%;
+  -moz-box-flex: 1;
+  -moz-flex: 1 1 30%;
+  -ms-flex: 1 1 30%;
+  flex: 1 1 30%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #a9cbff;
+  box-sizing: border-box;
+  min-height: 100px;
+  margin: 5px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 60%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 1 60%;
+  -ms-flex: 0 1 60%;
+  flex: 0 1 60%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  min-height: 200px;
+  opacity: 0;
+  animation: opacityMotion 0.3s forwards; }
+  .author-item__name {
+    font-size: 18px;
+    width: fit-content;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #a9cbff; }
+  .author-item__country {
+    font-size: 14px;
+    color: #6fa2dd;
+    width: fit-content;
+    margin-bottom: 10px; }
+
+.author-books-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .author-books-list__el {
+    font-size: 20px;
+    color: #000000; }
+
+.author-books-title {
+  font-size: 18px;
+  color: #6fa2dd;
+  margin-bottom: 10px; }
+
+.author-books__link {
+  font-size: 16px;
+  color: #a9cbff;
+  text-transform: uppercase;
+  text-decoration: none; }
+  .author-books__link:hover {
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none; }
+
+@keyframes opacityMotion {
+  100% {
+    opacity: 1; } }

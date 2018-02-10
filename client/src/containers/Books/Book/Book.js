@@ -1,13 +1,30 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import * as booksActions from "../../../store/actions";
 
-import "./BookPage.css";
+import "./Book.css";
 import libraryBk from "../../../assets/img/library.jpg";
 
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import Loader from "../../../components/Loader/Loader";
-import BookInfo from "../../../components/Books/BookInfo/BookInfo";
+import BookUI from "../../../components/BooksUI/BookUI/BookUI";
+
+const propTypes = {
+  onInitBook: PropTypes.func,
+  book: PropTypes.shape({
+    id: PropTypes.number,
+    pages: PropTypes.number,
+    year: PropTypes.number,
+    title: PropTypes.string,
+    author: PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      country: PropTypes.string
+    })
+  }),
+  error: PropTypes.bool
+};
 
 const style = {
   backgroundImage: `url(${libraryBk})`,
@@ -16,7 +33,7 @@ const style = {
   backgroundSize: "cover"
 };
 
-class BookPage extends Component {
+class Book extends Component {
   componentDidMount() {
     const id = this.parseParam();
     this.props.onInitBook(id);
@@ -36,11 +53,18 @@ class BookPage extends Component {
   render() {
     if (this.props.book) {
       const { title, year, pages } = this.props.book;
-      const { name } = this.props.book.author;
+      const { name, id } = this.props.book.author;
+
       return (
         <div className="container-book" style={style}>
           <div className="container-center-book">
-            <BookInfo name={title} author={name} year={year} pages={pages} />
+            <BookUI
+              name={title}
+              author={name}
+              authorId={id}
+              year={year}
+              pages={pages}
+            />
           </div>
         </div>
       );
@@ -49,6 +73,8 @@ class BookPage extends Component {
     }
   }
 }
+
+Book.propTypes = propTypes;
 
 const mapStateToProps = state => {
   return {
@@ -64,5 +90,5 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(
-  withErrorHandler(BookPage)
+  withErrorHandler(Book)
 );

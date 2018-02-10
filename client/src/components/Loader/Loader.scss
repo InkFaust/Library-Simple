@@ -2,6 +2,7 @@
 @import "../../style/_mixinComps.scss";
 
 .container-loader {
+  @include container;
   @include justify-content(center);
 }
 

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import * as booksActions from "../../store/actions";
 
 import "./Books.css";
@@ -7,7 +8,25 @@ import libraryBk from "../../assets/img/library.jpg";
 
 import withErrorHandler from "../hoc/withErrorHandler/withErrorHandler";
 import Loader from "../../components/Loader/Loader";
-import BooksItem from "../../components/Books/BooksItem";
+import BooksUI from "../../components/BooksUI/BooksUI";
+
+const propTypes = {
+  onInitBooks: PropTypes.func,
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      pages: PropTypes.number,
+      year: PropTypes.number,
+      title: PropTypes.string,
+      author: PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+        country: PropTypes.string
+      })
+    })
+  ),
+  error: PropTypes.bool
+};
 
 const style = {
   backgroundImage: `url(${libraryBk})`,
@@ -23,15 +42,18 @@ class Books extends Component {
 
   render() {
     if (this.props.books && !this.props.error) {
+      const { books } = this.props;
+
       return (
         <div className="container-books" style={style}>
           <div className="container-center-books">
-            {this.props.books.map(book => (
-              <BooksItem
+            {books.map(book => (
+              <BooksUI
                 key={book.id}
                 title={book.title}
                 author={book.author.name}
                 bookId={book.id}
+                authorId={book.author.id}
               />
             ))}
           </div>
@@ -42,6 +64,8 @@ class Books extends Component {
     }
   }
 }
+
+Books.propTypes = propTypes;
 
 const mapStateToProps = state => {
   return {
