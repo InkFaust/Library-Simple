@@ -7,13 +7,11 @@
     "cors": "^2.8.4",
     "express": "4.13.4",
     "sequelize": "3.31.1",
-    "sqlite3": "latest"
+    "sqlite3": "^3.1.13"
   },
   "devDependencies": {},
   "scripts": {
     "start": "node app.js",
-    "heroku-postbuild":
-      "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
-  },
-  "cacheDirectories": ["node_modules", "client/node_modules"]
+    "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+  }
 }
