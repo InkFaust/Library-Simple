@@ -25,7 +25,7 @@ Require the account!
 
 The package.json has a script for the directory changing and running the client.
 
-`"heroku-postbuild": "cd client && yarn --production=false && yarn run build"`
+`heroku-postbuild`
 
 ###### About the client:
 
