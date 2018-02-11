@@ -12,6 +12,7 @@ const propTypes = {
 function LinkEl(props) {
   return (
     <NavLink
+      exact={props.exact}
       to={props.to}
       activeClassName="active"
       className={props.className ? `link ${props.className}` : `link`}

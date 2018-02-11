@@ -50,4 +50,34 @@
   }
 }
 
+.list-navigation {
+  @include flexbox;
+  @include flex-dir(row);
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid;
+  border-color: transparent #a9cbff #a9cbff #a9cbff;
+  box-sizing: border-box;
+
+  .list__el {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .link {
+    @include link(#6fa2dd);
+
+    &:hover {
+      @include link(#fff);
+    }
+  }
+}
+
 @include opacity(1);

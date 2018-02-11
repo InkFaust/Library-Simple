@@ -9,6 +9,8 @@ import writerBk from "../../../assets/img/writer.jpg";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import Loader from "../../../components/Loader/Loader";
 import AuthorUI from "../../../components/AuthorsUI/AuthorUI/AuthorUI";
+import Navigation from "../../../components/Navigation/Navigation";
+import LinkEl from "../../../components/Navigation/LinkEl/LinkEl";
 
 const propTypes = {
   onInitAuthor: PropTypes.func,
@@ -62,6 +64,17 @@ class Author extends Component {
 
       return (
         <div className="container-author" style={style}>
+          <Navigation className="list-navigation">
+            <LinkEl exact to="/">
+              Home
+            </LinkEl>
+            <LinkEl exact to="/books/">
+              Books
+            </LinkEl>
+            <LinkEl exact to="/authors/">
+              Authors
+            </LinkEl>
+          </Navigation>
           <div className="container-center-author">
             <AuthorUI name={name} country={country} books={authorBooks} />
           </div>

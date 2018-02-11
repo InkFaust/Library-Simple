@@ -1,3 +1,5 @@
-const aux = props => props.children;
+function aux(props) {
+  return props.children;
+}
 
 export default aux;

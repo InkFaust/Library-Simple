@@ -5,6 +5,7 @@
   @include item;
   @include flex(0, 1, 60%);
   @include justify-content(center);
+  @include align-items(center);
   min-height: 200px;
   opacity: 0;
   animation: opacityMotion 0.3s forwards;

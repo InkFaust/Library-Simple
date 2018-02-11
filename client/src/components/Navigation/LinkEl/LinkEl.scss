@@ -2,6 +2,10 @@
 
 .link {
   @include link;
+
+  &.active {
+    @include link(#fff);
+  }
 }
 
 .link-home {

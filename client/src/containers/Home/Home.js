@@ -10,7 +10,8 @@ const style = {
   backgroundImage: `url(${libraryBk})`,
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
-  backgroundSize: "cover"
+  backgroundSize: "cover",
+  backgroundAttachment: "fixed"
 };
 
 export default class Home extends Component {

@@ -38,6 +38,11 @@
   -webkit-justify-content: center;
   -moz-justify-content: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
   min-height: 200px;
   opacity: 0;
   animation: opacityMotion 0.3s forwards; }

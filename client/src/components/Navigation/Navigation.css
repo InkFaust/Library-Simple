@@ -37,6 +37,42 @@
       .list-home .list__el:hover .link-home {
         color: #000; }
 
+.list-navigation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid;
+  border-color: transparent #a9cbff #a9cbff #a9cbff;
+  box-sizing: border-box; }
+  .list-navigation .list__el {
+    margin-right: 10px; }
+    .list-navigation .list__el:last-child {
+      margin-right: 0; }
+  .list-navigation .link {
+    font-size: 20px;
+    color: #6fa2dd;
+    text-transform: uppercase;
+    text-decoration: none; }
+    .list-navigation .link:hover {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none; }
+
 @keyframes opacityMotion {
   100% {
     opacity: 1; } }

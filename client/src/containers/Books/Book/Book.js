@@ -9,6 +9,8 @@ import libraryBk from "../../../assets/img/library.jpg";
 import withErrorHandler from "../../hoc/withErrorHandler/withErrorHandler";
 import Loader from "../../../components/Loader/Loader";
 import BookUI from "../../../components/BooksUI/BookUI/BookUI";
+import Navigation from "../../../components/Navigation/Navigation";
+import LinkEl from "../../../components/Navigation/LinkEl/LinkEl";
 
 const propTypes = {
   onInitBook: PropTypes.func,
@@ -57,6 +59,17 @@ class Book extends Component {
 
       return (
         <div className="container-book" style={style}>
+          <Navigation className="list-navigation">
+            <LinkEl exact to="/">
+              Home
+            </LinkEl>
+            <LinkEl exact to="/books/">
+              Books
+            </LinkEl>
+            <LinkEl exact to="/authors/">
+              Authors
+            </LinkEl>
+          </Navigation>
           <div className="container-center-book">
             <BookUI
               name={title}

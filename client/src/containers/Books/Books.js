@@ -9,6 +9,8 @@ import libraryBk from "../../assets/img/library.jpg";
 import withErrorHandler from "../hoc/withErrorHandler/withErrorHandler";
 import Loader from "../../components/Loader/Loader";
 import BooksUI from "../../components/BooksUI/BooksUI";
+import Navigation from "../../components/Navigation/Navigation";
+import LinkEl from "../../components/Navigation/LinkEl/LinkEl";
 
 const propTypes = {
   onInitBooks: PropTypes.func,
@@ -32,7 +34,8 @@ const style = {
   backgroundImage: `url(${libraryBk})`,
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
-  backgroundSize: "cover"
+  backgroundSize: "cover",
+  backgroundAttachment: "fixed"
 };
 
 class Books extends Component {
@@ -46,6 +49,17 @@ class Books extends Component {
 
       return (
         <div className="container-books" style={style}>
+          <Navigation className="list-navigation">
+            <LinkEl exact to="/">
+              Home
+            </LinkEl>
+            <LinkEl exact to="/books/">
+              Books
+            </LinkEl>
+            <LinkEl exact to="/authors/">
+              Authors
+            </LinkEl>
+          </Navigation>
           <div className="container-center-books">
             {books.map(book => (
               <BooksUI

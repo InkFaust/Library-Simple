@@ -6,6 +6,8 @@ import * as authorsActions from "../../store/actions";
 import Loader from "../../components/Loader/Loader";
 import withErrorHandler from "../hoc/withErrorHandler/withErrorHandler";
 import AuthorsUI from "../../components/AuthorsUI/AuthorsUI";
+import Navigation from "../../components/Navigation/Navigation";
+import LinkEl from "../../components/Navigation/LinkEl/LinkEl";
 
 import writerBk from "../../assets/img/writer.jpg";
 import "./Authors.css";
@@ -26,7 +28,8 @@ const style = {
   backgroundImage: `url(${writerBk})`,
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
-  backgroundSize: "cover"
+  backgroundSize: "cover",
+  backgroundAttachment: "fixed"
 };
 
 class Authors extends Component {
@@ -40,6 +43,17 @@ class Authors extends Component {
 
       return (
         <div className="container-authors" style={style}>
+          <Navigation className="list-navigation">
+            <LinkEl exact to="/">
+              Home
+            </LinkEl>
+            <LinkEl exact to="/books/">
+              Books
+            </LinkEl>
+            <LinkEl exact to="/authors/">
+              Authors
+            </LinkEl>
+          </Navigation>
           <div className="container-center-authors">
             {authors.map(author => (
               <AuthorsUI

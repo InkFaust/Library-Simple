@@ -7,6 +7,7 @@ import Books from "./containers/Books/Books";
 import Book from "./containers/Books/Book/Book";
 import Authors from "./containers/Authors/Authors";
 import Author from "./containers/Authors/Author/Author";
+import Error from "./components/Loader/Error/Error";
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route exact path="/books/:id" component={Book} />
           <Route exact path="/authors" component={Authors} />
           <Route exact path="/authors/:id" component={Author} />
+          <Route component={Error} />
         </Switch>
       </Aux>
     );

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Error from "../../../components/Loader/Error/Error";
 
-const withErrorHandler = WrappedComponent => {
+function withErrorHandler(WrappedComponent) {
   return class extends Component {
     render() {
       if (!this.props.error) {
@@ -12,6 +12,6 @@ const withErrorHandler = WrappedComponent => {
       }
     }
   };
-};
+}
 
 export default withErrorHandler;

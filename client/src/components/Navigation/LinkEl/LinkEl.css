@@ -3,6 +3,11 @@
   color: #000000;
   text-transform: uppercase;
   text-decoration: none; }
+  .link.active {
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none; }
 
 .link-home {
   display: -webkit-box;
