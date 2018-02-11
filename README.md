@@ -1,14 +1,3 @@
-#DONE:
-
-###### Server changes:
-
-* yarn instead of npm
-  `Brings the multi loading, the lock file, and so on`
-* 5000 port instead 3000
-  `5000 port for the server, 3000 port for the client, actually doesn't so matter`
-* Static folder from `public` to `client/bind`
-  `That's making for the deploying to Heroku and splitting up the project`
-
 ###### Run Locally the Server:
 
 `yarn start`
@@ -20,6 +9,7 @@
 ###### Deploy to Heroku:
 
 Require the account!
+I'll fix the axios instance soon... :)
 
 `git push heroku master`
 
@@ -38,48 +28,6 @@ Well, I guess I've paid attention to all errors may show up, and all (I'd better
 I don't like the way with styles, there are for refactoring, but without taking a look at a design, makings more difficult to choose between ways.
 
 I'll love to implement `styled-components`, and `compass sass` soon.
-
-# Задание:
-
-Создать приложение для отображения книг и авторов используя React, контроль состояния - Redux. Для стилизации использовать препроцессор Sass или Less. Каждая страница должна иметь уникальную ссылку. Переходы по страницам в приложении осуществляются без перезагрузки страницы.
-
-## Страницы:
-
-###### Список книг
-
-Перечень доступных книг. Отображаем заголовок и автора. При клике на заголовок переходим на страницу о книге, при клике на автора переходим на страницу автора.
-
-###### Список авторов
-
-Перечень авторов. При клике на автора переход на страницу автора
-
-###### Страница автор
-
-Отображаем данные по автору:
-
-* ФИО
-* Список книг написанные автором с возможностью перехода на каждую книгу
-
-###### Cтраница книга
-
-* Название книги
-* Автор с возможностью перехода на его страницу
-* Количество страниц
-* Год, в котором книга была выпущена
-
-# Старт проекта
-
-###### Установить npm зависимости
-
-`npm install`
-
-###### Запустить node-сервер
-
-`npm start`
-
-###### Открыть ссылку для просмотра проекта
-
-`http://localhost:3000`
 
 # API
 
