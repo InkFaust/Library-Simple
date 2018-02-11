@@ -1,15 +1,22 @@
+###### Install dependencies:
+
+`yarn`
+
+`cd client/ && yarn`
+
 ###### Run Locally the Server:
 
 `yarn start`
 
 ###### Run Locally the Client:
 
-`cd client && yarn start`
+`cd client/ && yarn start`
 
-###### Deploy to Heroku:
+###### Deploy to Heroku :rocket: :
 
-Require the account!
-I'll fix the axios instance soon... :)
+Require an account has connected!
+
+I'll fix the axios instance soon... :grin:
 
 `git push heroku master`
 
@@ -21,23 +28,23 @@ The package.json has a script for the directory changing and running the client.
 
 At first, I'm not designer at all as you'll see...
 
-Also, I'd love to ask you pay attention that I've never used the `Redux` before (first time, hope everything is fine);
+Also, I'd love to ask you pay attention that I've never used the `Redux` before (the first time, hope everything is fine);
 
-Well, I guess I've paid attention to all errors may show up, and all (I'd better don't say 'all') data passed through validation.
+Well, I guess I've paid attention to all errors may show up, and all (I'd better don't say 'all') data have passed through validation.
 
 I don't like the way with styles, there are for refactoring, but without taking a look at a design, makings more difficult to choose between ways.
 
-I'll love to implement `styled-components`, and `compass sass` soon.
+I'll love to implement the `styled-components` or try the `compass sass` soon.
 
 # API
 
 ```
-/api/books              получить список книг
-/api/books/{id}         получить информацию о текущей книге
+/api/books              get books list
+/api/books/{id}         get information of current book
 ```
 
 ```
-/api/authors            получить список авторов
-/api/authors/{id}       получить информацию о текущем авторе
-/api/authors/{id}/books получить список книг автора
+/api/authors            get authors list
+/api/authors/{id}       get information of current author
+/api/authors/{id}/books get books list of current author
 ```
