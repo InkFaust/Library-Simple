@@ -18,7 +18,7 @@ export const setBooks = books => {
 
 export const initBooks = () => {
   return dispatch => {
-    axios
+    axios()
       .get("/api/books/")
       .then(response => {
         if (response.data) {

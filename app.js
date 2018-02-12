@@ -187,12 +187,26 @@ if (!isDBExist)
       console.log("ERROR SYNCING WITH DB", e);
     });
 
+var whitelist = [
+  "http://localhost:3000",
+  "https://library-simple.herokuapp.com"
+];
+var corsOptionsDelegate = function(req, callback) {
+  var corsOptions;
+  if (whitelist.indexOf(req.header("Origin")) !== -1) {
+    corsOptions = { origin: true }; // reflect (enable) the requested origin in the CORS response
+  } else {
+    corsOptions = { origin: false }; // disable CORS for this request
+  }
+  callback(null, corsOptions); // callback expects two parameters: error and options
+};
+
 var app = (module.exports = express());
+app.use(cors(corsOptionsDelegate));
 app.set("port", process.env.PORT || 5000);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "client/build")));
-app.use(cors());
 
 // AUTHORS API
 
