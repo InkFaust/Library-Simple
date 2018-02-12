@@ -45,9 +45,9 @@ class Author extends Component {
     this.props.onInitAuthorBooks(id);
   }
 
-  componentDidUpdate() {
+  componentWillReceiveProps(nextProps) {
     const id = this.parseParam();
-    if (this.props.author.id !== id) {
+    if (nextProps.author.id !== id) {
       this.props.onInitAuthor(id);
       this.props.onInitAuthorBooks(id);
     }

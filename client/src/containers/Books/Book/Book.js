@@ -41,9 +41,9 @@ class Book extends Component {
     this.props.onInitBook(id);
   }
 
-  componentDidUpdate() {
+  componentWillReceiveProps(nextProps) {
     const id = this.parseParam();
-    if (this.props.book.id !== id) {
+    if (nextProps.book.id !== id) {
       this.props.onInitBook(id);
     }
   }
