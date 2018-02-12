@@ -12,6 +12,8 @@
   "devDependencies": {},
   "scripts": {
     "start": "node app.js",
-    "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
-  }
+    "heroku-postbuild":
+      "cd client/ && yarn install && yarn install --only=dev --no-shrinkwrap && yarn run build"
+  },
+  "cacheDirectories": ["node_modules", "clientg/node_modules"]
 }

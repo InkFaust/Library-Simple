@@ -43,7 +43,7 @@ export const setBook = book => {
 
 export const initBook = id => {
   return dispatch => {
-    axios
+    axios()
       .get("/api/books/" + id)
       .then(response => {
         if (response.data) {
@@ -68,7 +68,7 @@ export const setAuthors = authors => {
 
 export const initAuthors = () => {
   return dispatch => {
-    axios
+    axios()
       .get("/api/authors/")
       .then(response => {
         if (response.data) {
@@ -93,7 +93,7 @@ export const setAuthor = author => {
 
 export const initAuthor = id => {
   return dispatch => {
-    axios
+    axios()
       .get("/api/authors/" + id)
       .then(response => {
         if (response.data) {
@@ -118,7 +118,7 @@ export const setAuthorBooks = authorBooks => {
 
 export const initAuthorBooks = id => {
   return dispatch => {
-    axios
+    axios()
       .get("/api/authors/" + id + "/books/")
       .then(response => {
         if (response.data.length > 0) {
