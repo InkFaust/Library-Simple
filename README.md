@@ -1,3 +1,5 @@
+![alt text](https://image.ibb.co/guiX87/lib_simple.png "Main Page")
+
 ###### Install dependencies:
 
 `yarn`
